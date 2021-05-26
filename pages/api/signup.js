@@ -28,7 +28,7 @@ export default withSession(async (req, res) => {
     // 2. Create a card for the Marqeta user, linked to the pre-defined card product.
     // https://www.marqeta.com/docs/developer-guides/core-api-quick-start#_step_2_get_a_card_product_token
     const mqCardsResponse = await marqetaClient.post('/cards', {
-      card_product_token: 'c45ee0a9-6efa-4851-bda9-7102ffcf7b40',
+      card_product_token: 'your-card-product-token',
       user_token: mqUser.token
     })
     const mqCard = mqCardsResponse.data
